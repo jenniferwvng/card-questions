@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/card-questions/static/css/main.0a9dbc9e.css",
+    "main.js": "/card-questions/static/js/main.4970f750.js",
+    "static/js/787.24acbffd.chunk.js": "/card-questions/static/js/787.24acbffd.chunk.js",
+    "index.html": "/card-questions/index.html",
+    "main.0a9dbc9e.css.map": "/card-questions/static/css/main.0a9dbc9e.css.map",
+    "main.4970f750.js.map": "/card-questions/static/js/main.4970f750.js.map",
+    "787.24acbffd.chunk.js.map": "/card-questions/static/js/787.24acbffd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a9dbc9e.css",
+    "static/js/main.4970f750.js"
+  ]
+}
