@@ -6,4 +6,4 @@ Also learned that state is asynchronous thus console logs of the state will not 
 
 Styling has room for improvement. Going to add event listeners to enable keydown press for arrow keys, just going to solve a bug related to it first.
 
-Live demo: https://jenniferwvng.github.io/card-questions/
+<b>Live demo:</b> https://jenniferwvng.github.io/card-questions/
