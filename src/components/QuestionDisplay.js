@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import questions from "../questions"
 
 const QuestionDisplay = ({state}) => {
