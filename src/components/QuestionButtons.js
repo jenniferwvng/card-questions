@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import questions from "../questions"
 import styled from 'styled-components';
+import { useEffect } from 'react';
 
 const Button = styled.button`
     background-color: white;
@@ -15,27 +16,39 @@ const Button = styled.button`
 `
 
 const QuestionButtons = ({state, setState}) => {
-
-  const moveNext = state + 1;
-  const movePrev = state - 1;
-
-  const prevQuestion = () => {
-    if (movePrev < questions.length && movePrev >= 0) {
-      console.log("move to prev question"); 
-      setState(movePrev);
-    } else {
-      console.log("No previous questions"); 
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress);
+        return () => document.removeEventListener('keydown', handleKeyPress);
+    }, [state])
+    
+    const handleKeyPress = (e) => {
+        if (e.key === 'ArrowRight') {
+            nextQuestion();
+        } else if (e.key === 'ArrowLeft') {
+            prevQuestion();
+        }
     }
-  }
-  
-  const nextQuestion = () => {
-    if (moveNext < questions.length) {
-      setState(moveNext);
-      console.log("move to next question"); 
-    } else {
-      console.log("No more questions"); 
+    
+    const moveNext = state + 1;
+    const movePrev = state - 1;
+
+    const prevQuestion = () => {
+        if (movePrev < questions.length && movePrev >= 0) {
+        console.log("move to prev question"); 
+        setState(movePrev);
+        } else {
+        console.log("No previous questions"); 
+        }
     }
-  }
+    
+    const nextQuestion = () => {
+        if (moveNext < questions.length) {
+        setState(moveNext);
+        console.log("move to next question"); 
+        } else {
+        console.log("No more questions"); 
+        }
+    }
 
     return (
         <span> 
