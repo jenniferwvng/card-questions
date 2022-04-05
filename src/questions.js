@@ -2,10 +2,10 @@ const questions = [
     {
         id: 1,
         contentText: [
-            {
+        {
         key: 1,
         content: "Which persons in your life do you love the most?"
-            }
+        }
         ],
     },
     {
